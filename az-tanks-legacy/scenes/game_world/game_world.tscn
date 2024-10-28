@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpadk114hj3b6"]
+
+[ext_resource type="Texture2D" uid="uid://byvojoj2uy1kc" path="res://assets/images/meta/splash.png" id="1_v3vp6"]
+[ext_resource type="Script" path="res://scenes/game_world/splash.gd" id="2_uyp61"]
+[ext_resource type="Shader" path="res://shaders/world_idle_overlay.gdshader" id="3_jcl01"]
+[ext_resource type="Script" path="res://scenes/game_world/color_rect.gd" id="4_i0pep"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_witvr"]
+shader = ExtResource("3_jcl01")
+shader_parameter/input_rand = null
+
+[node name="GameWorld" type="Node2D"]
+
+[node name="Splash" type="Sprite2D" parent="."]
+position = Vector2(400, 200)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_v3vp6")
+script = ExtResource("2_uyp61")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CanvasLayer"]
+material = SubResource("ShaderMaterial_witvr")
+offset_left = -46.0
+offset_top = -37.0
+offset_right = 1184.0
+offset_bottom = 702.0
+script = ExtResource("4_i0pep")

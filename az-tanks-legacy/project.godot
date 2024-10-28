@@ -11,8 +11,19 @@ config_version=5
 [application]
 
 config/name="az-tanks-legacy"
+run/main_scene="res://scenes/game_world/game_world.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/image="res://assets/images/meta/splash.png"
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+
+[display]
+
+window/stretch/scale_mode="integer"
 
 [rendering]
 

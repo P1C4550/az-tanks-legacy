@@ -22,8 +22,8 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_height=1080
-window/size/mode=2
 window/size/borderless=true
+window/stretch/mode="viewport"
 window/size/viewport_width=1920
 
 [rendering]

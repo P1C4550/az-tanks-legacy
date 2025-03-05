@@ -11,8 +11,20 @@ config_version=5
 [application]
 
 config/name="az-tanks-legacy"
+run/main_scene="uid://exkxya8u8x7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/image="uid://pjubsiht7ex5"
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_height=1080
+window/size/mode=2
+window/size/borderless=true
+window/size/viewport_width=1920
 
 [rendering]
 
